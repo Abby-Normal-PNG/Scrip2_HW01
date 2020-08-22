@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BallMotor))]
+[RequireComponent(typeof(Inventory))]
 public class Player : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 3;

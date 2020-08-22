@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8518748406264741833}
   - component: {fileID: 8518748406264741830}
   - component: {fileID: 8518748406264741832}
+  - component: {fileID: 5706962198140487358}
   m_Layer: 0
   m_Name: PlayerBall
   m_TagString: Untagged
@@ -59,6 +60,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,6 +85,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &8518748406264741836
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -124,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6357f31063061b045914c8c70d587953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 3
 --- !u!114 &8518748406264741832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +141,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxSpeed: 10
+--- !u!114 &5706962198140487358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518748406264741839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fafb72f383db4a438866c287930a7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
