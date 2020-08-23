@@ -9,7 +9,21 @@ public class Player : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 3;
     int _currentHealth;
-    
+
+    bool _canBeDamaged = true;
+    public bool CanBeDamaged 
+    { 
+        set { _canBeDamaged = value; } 
+        get { return _canBeDamaged; } 
+    }
+
+    bool _isPoweredUp = false;
+    public bool IsPoweredUp
+    {
+        set { _isPoweredUp = value; }
+        get { return _isPoweredUp; }
+    }
+
     BallMotor _ballMotor;
 
     private void Awake()
@@ -47,8 +61,15 @@ public class Player : MonoBehaviour
 
     public void DecreaseHealth(int amount)
     {
-        _currentHealth -= amount;
-        Debug.Log("Player's Health: " + _currentHealth);
+        if (_canBeDamaged)
+        {
+            _currentHealth -= amount;
+            Debug.Log("Player's Health: " + _currentHealth);
+        }
+        else
+        {
+            Debug.Log("No Damage - Invincible");
+        }
         if (_currentHealth <= 0)
         {
             Kill();

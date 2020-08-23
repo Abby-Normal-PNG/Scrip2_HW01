@@ -10,7 +10,7 @@ public abstract class PowerUpBase : CollectibleBase
     protected abstract void PowerUp(Player player);
     protected abstract void PowerDown(Player player);
 
-    protected float _durationTimeSecs = 5f;
+    [SerializeField] float _durationTimeSecs = 5f;
     private Coroutine _powerUpCoroutine;
     protected Collider _collider;
 
@@ -25,7 +25,7 @@ public abstract class PowerUpBase : CollectibleBase
     private void OnTriggerEnter(Collider other)
     {
         Player player = other.GetComponent<Player>();
-        if (player != null)
+        if (player != null && player.IsPoweredUp == false)
         {
             Collect(player);
             //spawn particles/fx beause we need to disable visuals
